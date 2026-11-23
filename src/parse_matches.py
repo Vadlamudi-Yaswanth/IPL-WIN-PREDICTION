@@ -3,7 +3,7 @@
 Run from the repo root:
     python src/parse_matches.py
 
-Reads : data/raw/ipl/*.json
+Reads : data/raw/ipl/ipl_json/*.json
 Writes: data/processed/ball_by_ball.csv
 
 One row per delivery. The match state (runs, wickets, balls) is recorded
@@ -16,7 +16,7 @@ from pathlib import Path
 
 import pandas as pd
 
-RAW_DIR = Path("data/raw/ipl")
+RAW_DIR = Path("data/raw/ipl/ipl_json")
 OUT_FILE = Path("data/processed/ball_by_ball.csv")
 
 # Wicket "kinds" that are not real dismissals
